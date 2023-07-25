@@ -3,24 +3,23 @@ package lucaguerra.entities;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
+import lombok.ToString;
 
 @NoArgsConstructor
 @Getter
 @Setter
-@Slf4j
+@ToString
 public class Drink extends AbstractProdotti {
 
-	private String valoreNutrizionale;
+	private double kcal;
 
-	public Drink(String nome, double prezzo, String valoreNutrizionale) {
+	public Drink(String nome, double prezzo, double kcal) {
 		super(nome, prezzo);
-		this.valoreNutrizionale = valoreNutrizionale;
+		this.kcal = kcal;
 	}
 
-	@Override
-	public String toString() {
-		return "Drink :" + " " + getNome() + " " + getPrezzo() + " " + valoreNutrizionale + "]";
+	public String getMenu() {
+		return this.getNome() + " - kcal: " + kcal + " - prezzo: " + this.getPrezzo();
 	}
 
 }

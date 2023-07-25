@@ -3,10 +3,12 @@ package lucaguerra.entities;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString
 public abstract class AbstractProdotti {
 
 	private String nome;
@@ -15,11 +17,6 @@ public abstract class AbstractProdotti {
 	public AbstractProdotti(String nome, double prezzo) {
 		this.nome = nome;
 		this.prezzo = prezzo;
-	}
-
-	@Override
-	public String toString() {
-		return nome + " " + prezzo + "]";
 	}
 
 }

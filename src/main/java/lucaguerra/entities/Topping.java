@@ -1,28 +1,45 @@
 package lucaguerra.entities;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
+import lucaguerra.Interface.IElementiMenu;
 
 @NoArgsConstructor
 @Getter
 @Setter
-@Slf4j
-public class Topping extends AbstractProdotti {
 
-	private List<Topping> comboToppings;
+public class Topping implements IElementiMenu {
 
-	public Topping(String nome, double prezzo) {
-		super(nome, prezzo);
-		comboToppings = new ArrayList<>();
+	private IElementiMenu elementiMenu;
+	private String name;
+	private Double price;
+	private Double calorie;
+
+	public Topping(IElementiMenu elementiMenu, String name, Double price, Double calorie) {
+		this.elementiMenu = elementiMenu;
+		this.name = name;
+		this.price = price;
+		this.calorie = calorie;
 	}
 
-	public void aggiungiCombinazioneTopping(Topping topping) {
-		comboToppings.add(topping);
+	@Override
+	public String getName() {
+		return this.elementiMenu.getName() + " + " + this.name;
+	}
+
+	@Override
+	public Double getPrice() {
+		return this.elementiMenu.getPrice() + this.price;
+	}
+
+	@Override
+	public Double getCalorie() {
+		return this.elementiMenu.getCalorie() + this.calorie;
+	}
+
+	public String getMenu() {
+		return this.name + " - calories: " + calorie + " - price: " + price;
 	}
 
 }

@@ -1,16 +1,21 @@
 package lucaguerra.entities;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.extern.slf4j.Slf4j;
 
-@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @ToString
-@Slf4j
-public class Franchise extends AbstractProdotti {
 
+public class Franchise {
+
+	private String name;
+	private Double price;
+
+	public String getMenu() {
+		return this.name + " - price: " + price;
+	}
 }
