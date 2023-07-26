@@ -13,7 +13,7 @@ import lucaguerra.entities.Pizza;
 
 @Component
 @Slf4j
-@Order(2)
+@Order(1)
 public class OrdiniRunner implements CommandLineRunner {
 
 	private Ordine ordine1;

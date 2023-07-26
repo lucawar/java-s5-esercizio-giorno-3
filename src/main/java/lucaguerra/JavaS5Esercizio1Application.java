@@ -3,14 +3,13 @@ package lucaguerra;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.core.annotation.Order;
 
 import lombok.extern.slf4j.Slf4j;
 import lucaguerra.entities.Pizza;
 
 @SpringBootApplication
 @Slf4j
-@Order(1)
+
 public class JavaS5Esercizio1Application {
 
 	public static void main(String[] args) {
