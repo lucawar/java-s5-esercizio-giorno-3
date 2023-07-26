@@ -16,6 +16,6 @@ public class Tavolo {
 
 	@Override
 	public String toString() {
-		return "N°Tavolo " + numeroTavolo + " - stato tavolo=" + statoTavolo + " - copertiMassimi" + copertiMassimi;
+		return "N°Tavolo " + numeroTavolo + " - stato tavolo " + statoTavolo + " - copertiMassimi " + copertiMassimi;
 	}
 }

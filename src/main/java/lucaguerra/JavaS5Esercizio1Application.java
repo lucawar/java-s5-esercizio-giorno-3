@@ -3,11 +3,14 @@ package lucaguerra;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.core.annotation.Order;
 
 import lombok.extern.slf4j.Slf4j;
+import lucaguerra.entities.Pizza;
 
 @SpringBootApplication
 @Slf4j
+@Order(1)
 public class JavaS5Esercizio1Application {
 
 	public static void main(String[] args) {
@@ -18,15 +21,21 @@ public class JavaS5Esercizio1Application {
 
 		GestioneMenu stampa = new GestioneMenu();
 
-		log.info("----Esercizio 1----");
+		System.out.println();
+		log.info("----ESERCIZIO 1----");
 		System.out.println();
 		log.info((String) ctx.getBean("getMessage"));
 
 		System.out.println();
 
-		log.info("----Esercizio 2----");
+		log.info("----ESERCIZIO 2----");
 		System.out.println();
 		stampa.stampaMenu();
+		System.out.println();
+
+		log.info("/PERSONALIZZA LA TUA PIZZA/");
+		Pizza pizza1 = (Pizza) ctx.getBean("margheritaToppingCheese");
+		log.info("Pizza 1: " + pizza1.toString());
 
 		ctx.close();
 

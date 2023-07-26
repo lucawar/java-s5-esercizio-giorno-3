@@ -1,24 +1,32 @@
 package lucaguerra.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lucaguerra.Enum.PizzaSize;
-import lucaguerra.Interface.IElementiMenu;
 
 @AllArgsConstructor
 @Getter
 @Setter
 
-public class Pizza extends AbstractProdotti implements IElementiMenu {
+public class Pizza extends AbstractProdotti {
 
 	private double kcal;
 	private PizzaSize pizzaSize;
+	private List<Topping> toppings;
 
 	public Pizza(String nome, double prezzo, double kcal) {
 		super(nome, prezzo);
 		this.kcal = kcal;
+		this.toppings = new ArrayList<>();
 
+	}
+
+	public void addTopping(Topping topping) {
+		toppings.add(topping);
 	}
 
 	public String getMenu() {
@@ -26,20 +34,8 @@ public class Pizza extends AbstractProdotti implements IElementiMenu {
 	}
 
 	@Override
-	public String getName() {
-
-		return this.getName();
+	public String toString() {
+		return this.getNome() + " -size: " + pizzaSize + " " + toppings;
 	}
 
-	@Override
-	public Double getPrice() {
-
-		return this.getPrice();
-	}
-
-	@Override
-	public Double getCalorie() {
-
-		return this.getCalorie();
-	}
 }
