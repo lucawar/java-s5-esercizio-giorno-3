@@ -6,8 +6,4 @@ public class PizzaMargherita extends Pizza {
 		super("Margherita (pomodoro, mozzarella)", 4.99, 1104d);
 	}
 
-	@Override
-	public String toString() {
-		return "Margherita";
-	}
 }

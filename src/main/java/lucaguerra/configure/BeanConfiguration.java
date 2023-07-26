@@ -57,7 +57,7 @@ public class BeanConfiguration {
 
 	}
 
-	// CREAZIONE PIZZE
+	// CREAZIONE METODI PER PIZZE
 	@Bean
 	public Pizza margherita() {
 		return new PizzaMargherita();
@@ -73,7 +73,7 @@ public class BeanConfiguration {
 		return new PizzaGricia();
 	}
 
-	// CREAZIONE TOPPING
+	// CREAZIONE METODI PER TOPPING
 	public Topping cheese() {
 		return new toppingCheese(null);
 	}
@@ -89,7 +89,8 @@ public class BeanConfiguration {
 	public Topping salame() {
 		return new ToppingSalame(null);
 	}
-	// CREAZIONE DRINK
+
+	// CREAZIONE METODI PER DRINK
 
 	@Bean
 	public Drink colaDrink() {
@@ -106,7 +107,7 @@ public class BeanConfiguration {
 		return new ChinottoDrink();
 	}
 
-	// CREAZIONE FRANCHISE
+	// CREAZIONE METODI PER FRANCHISE
 
 	public Franchise tazza() {
 		return new Tazza();
