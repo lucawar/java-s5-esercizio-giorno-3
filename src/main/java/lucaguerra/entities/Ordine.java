@@ -40,7 +40,7 @@ public class Ordine {
 				+ numeroPersone + " - oraAcquisto " + oraAcquisto;
 	}
 
-	public double calcolaTotale() {
+	public double contoTotaleOrdine() {
 		double totale = 0.0;
 
 		for (Pizza pizza : listaPizza) {
@@ -54,8 +54,8 @@ public class Ordine {
 		return totale;
 	}
 
-	public void stampaTotale() {
-		double totale = calcolaTotale();
+	public void stampacontoTotaleOrdine() {
+		double totale = contoTotaleOrdine();
 		log.info("Totale dell'ordine: " + totale + "€");
 	}
 

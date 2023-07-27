@@ -24,7 +24,6 @@ public class JavaS5Esercizio1Application {
 		log.info("----ESERCIZIO 1----");
 		System.out.println();
 		log.info((String) ctx.getBean("getMessage"));
-
 		System.out.println();
 
 		log.info("----ESERCIZIO 2----");
@@ -39,5 +38,4 @@ public class JavaS5Esercizio1Application {
 		ctx.close();
 
 	}
-
 }

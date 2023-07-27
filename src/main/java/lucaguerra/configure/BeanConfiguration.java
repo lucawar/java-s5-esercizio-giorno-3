@@ -5,7 +5,6 @@ import java.time.LocalDate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import lucaguerra.Enum.PizzaSize;
 import lucaguerra.Enum.StatoTavolo;
 import lucaguerra.entities.ChinottoDrink;
 import lucaguerra.entities.ColaDrink;
@@ -130,13 +129,13 @@ public class BeanConfiguration {
 	}
 
 	// CREAZIONE PIZZE PERSONALIZZATE
-	@Bean
-	public Pizza margheritaToppingCheese() {
-		Pizza margherita = new Pizza("Margherita", 8.99, 180);
-		margherita.setPizzaSize(PizzaSize.STANDARD);
-		margherita.addTopping(new Topping("Cheese", 1.5, 50d));
-		return margherita;
-	}
+//	@Bean
+//	public Pizza margheritaToppingCheese() {
+//		Pizza margherita = new Pizza("Margherita", 8.99, 180);
+//		margherita.setPizzaSize(PizzaSize.STANDARD);
+//		margherita.addTopping(new Topping("Cheese", 1.5, 50d));
+//		return margherita;
+//	}
 
 	// CREAZIONE TAVOLI
 	@Bean

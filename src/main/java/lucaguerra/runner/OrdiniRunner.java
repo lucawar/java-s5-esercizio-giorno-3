@@ -60,7 +60,7 @@ public class OrdiniRunner implements CommandLineRunner {
 			log.info("- " + drink.getNome() + " " + drink.getPrezzo() + "$");
 		}
 
-		double totale = ordine.calcolaTotale();
+		double totale = ordine.contoTotaleOrdine();
 		System.out.println();
 		log.info("Conto Totale: " + totale + " $");
 	}
